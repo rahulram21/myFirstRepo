@@ -54,3 +54,4 @@ let r=num_arr.reduce((x,y)=>{
     return x+y
 })
 console.log(r)
+console.log("boom")
