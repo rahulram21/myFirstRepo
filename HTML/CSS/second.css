@@ -1,0 +1,11 @@
+body{
+    background-color: cadetblue;
+    font-size: 30px;
+}
+.mylink:hover{
+    background-color: chocolate;
+}
+h1{
+    margin: 10px 10px 20px 20px;
+    text-align: center;
+}

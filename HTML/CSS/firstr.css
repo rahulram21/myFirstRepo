@@ -1,0 +1,30 @@
+.header{
+    color: burlywood;
+    background-color: lightslategrey;
+}
+nav{
+    text-align: center;
+    background-color: crimson;
+    display:block;
+    background-size: 100%;
+
+}
+.main-content{
+    color: lightcoral;
+    background-color: mediumslateblue;
+    background-size: 100%;
+}
+.heading{
+    margin:0;
+    text-align: center;
+}
+.boom{
+    padding: 20px;
+    opacity: 0.5;
+    text-decoration: none;
+    margin: 1%;
+    background-color: cadetblue;
+}
+.boom:hover{
+    background-color: orangered;
+}
