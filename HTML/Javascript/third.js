@@ -27,6 +27,7 @@ numm_arr.forEach((num)=>{
 })*/
 /*********** **/
 /*ARRAY FUNCTIONS*/
+//Map function
 let num_arr=[10,20,41,30,53,60]
 console.log(num_arr)
 let new_arr=num_arr.map((d)=>{//map function is to manipulate data
@@ -53,5 +54,43 @@ let r=num_arr.reduce((x,y)=>{
     console.log("Y",y)
     return x+y
 })
+//Object notation
 console.log(r)
 console.log("boom")
+let obj={}
+
+let person={
+    name:"Rahul",
+    age:22,
+    profession:"none",
+    show:function(){
+        console.log(`Name : ${this.name} , age: ${this.age} , profession: ${this.profession}`)
+    }
+}
+person.show()
+//Inheritance
+let student={
+    rollNo:21,
+    Name:"Rahul",
+    Marks:[20,40,40,0],
+    markAvg:function(){
+        console.log(`Average of Marks =${this.Marks.reduce((x,y)=>{return x+y})/this.Marks.length} `)
+
+    }
+}
+student.markAvg()
+let employee={
+    id:21,
+    Name:"John",
+    Salary:20000,
+    incrementSalry:function(amount){
+        this.Salary+=amount
+        console.log("Current salary = ",this.Salary)
+    }
+    
+}
+employee.incrementSalry(3000)
+
+//json
+//javascript object notation
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <input type="text" id="number" placeholder="Mobile number">
+    <button type="submit" onclick="search()">Search</button>
+    <textarea id="text"></textarea>
+    <script>
+        // function search(){
+        //     let num=document.getElementById("number").value
+        //     let regex1=/^\d{10}$/g||/^((0484)\s)||((0485)[-])+\d{7}$/g
+            
+        //     document.getElementById("text").innerText=num.match(regex1)
+        // }
+
+localStorage.setItem("one","apple")//for temporary storage
+localStorage.setItem("two","orange")
+localStorage.clear()//for clearing the localstorage
+/*function currying*/
+function volume(l){
+    return function(b){
+        return function(h){
+            return l*b*h
+        }
+    }
+}
+f=volume(1000)
+console.log(f)
+f1=f(40)
+f2=f1(20)
+console.log(f2)
+//==
+console.log(volume(20)(20)(20))
+//Using bind function
+function greet(gender,age,name){
+    let salutation=gender=="male"?"Mr":"Ms"
+    if(age>30){
+        console.log("hello "  + salutation+" "+name)
+    }else{
+        console.log("hey "+salutation+" "+name)
+    }
+}
+//v=greet("male",32,"Rahul")
+p=greet.bind(null,"male",30)
+console.log(p)
+p("zoom")
+/*Array functions*/
+//every()
+let num=["a",123,"b",43]
+let q=num.every((element)=>{
+    console.log("called")
+    if(/^\d+$/.test(element)){
+        return true
+    }
+})
+console.log(q)
+//some()
+let q1=num.some((element)=>{
+    console.log("called")
+    if(/^\d+$/.test(element)){
+        return true
+    }
+})
+console.log(q1)
+//array destruction
+let [a,b,c,d]=num
+console.log(a)
+console.log(b)
+console.log(c)
+/*Object Methods*/
+//Object.assign()
+let o1={x:10,y:20}
+let o2={z:10,y:25}
+let o3=Object.assign(o1,o2)
+console.log(o3)
+//Object.entries()-->For iterating through object
+for ([k,value] of Object.entries(o3)){
+    
+}
+
+    </script>
+</body>
+</html>

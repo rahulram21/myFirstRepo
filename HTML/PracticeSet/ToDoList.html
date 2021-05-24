@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1 style="color: slategray; font-family: 'Times New Roman', Times, serif;">TO DO LIST</h1>
+        <input type="text" id="value" placeholder="Add your goals" style="border-style: solid;border-color: deepskyblue;width: 300px;height: 20px ;background-color: rgb(192, 149, 235);">
+        <button id="button" onclick="clickk()" style="height: 25px; background-color: darksalmon;">Save</button>
+        <ul id="bird">
+
+        </ul>
+
+
+        <script>
+        
+        function clickk(){
+            var q=document.createElement('li')
+            var v=document.createElement('button')
+            v.innerText="Remove"
+            v.style.cssText="background-color:yellow; margin:2px"
+            
+            v.addEventListener('click',function(){
+                document.getElementById("bird").removeChild(q)
+            })
+            
+            q.innerText=document.getElementById("value").value
+            document.getElementById("bird").appendChild(q).appendChild(v)
+            
+        }
+
+        </script>
+    </body>
+</html>
